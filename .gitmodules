@@ -1,3 +1,9 @@
 [submodule "pi/src/raspicam_node"]
 	path = pi/src/raspicam_node
 	url = https://github.com/fpasteau/raspicam_node.git
+[submodule "photon/lib/Adafruit_BNO055"]
+	path = photon/lib/Adafruit_BNO055
+	url = https://github.com/ghirlekar/Adafruit_BNO055.git
+[submodule "photon/lib/Adafruit_Sensor"]
+	path = photon/lib/Adafruit_Sensor
+	url = https://github.com/ghirlekar/Adafruit_Sensor.git
