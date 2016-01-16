@@ -1,0 +1,54 @@
+<launch>
+
+    <env name="ROS_MASTER_URI" value="http://ghirlekar-ros:11311" />
+
+    <node name="base_to_laser_broadcaster" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 base_link laser 100" />
+
+
+    <node name="photon_serial" pkg="rosserial_python" type="serial_node.py">
+        <param name="port" value="/dev/ttyACM0" />
+    </node>
+
+    <node name="imu_broadcaster" pkg="crawler" type="imu_broadcaster.py">
+        <remap from="orientation" to="crawler0/orientation"/>
+        <remap from="angular_velocity" to="crawler0/angular_velocity"/>
+        <remap from="linear_acceleration" to="crawler0/linear_acceleration"/>
+        <remap from="imu" to="crawler0/imu"/>
+    </node>
+
+
+    <node name="ekf_localization" pkg="robot_localization" type="ekf_localization_node" clear_params="true">
+        <param name="two_d_mode" value="true"/>
+        <param name="imu0" value="crawler0/imu"/>
+        <rosparam param="imu0_config"> [false, false, false,
+                                        true,  true,  true,
+                                        false, false, false,
+                                        true,  true,  true,
+                                        false, false, false]</rosparam>
+        <param name="imu0_differential" value="false"/>
+        <param name="imu0_relative" value="false"/>
+    </node>
+    
+
+    <node name="hokuyo_lidar" pkg="hokuyo_node" type="hokuyo_node">
+        <param name="port" value="/dev/ttyACM1"/>
+    </node>
+    
+
+    <node pkg="hector_mapping" type="hector_mapping" name="hector_mapping" output="screen">
+        <param name="map_frame" value="map" />
+        <param name="use_tf_scan_transformation" value="true" />
+        <param name="use_tf_pose_start_estimate" value="false" />
+        <param name="pub_map_odom_transform" value="true" />
+        <param name="advertise_map_service" value="true" />
+        <param name="scan_topic" value="scan" />
+    </node>
+
+    <node name="cam_front" pkg="raspicam" type="raspicam_node">
+        <param name="height" value="480"/>
+        <param name="width" value="640"/>
+        <param name="quality" value="50"/>
+    </node>
+
+    <node name="start_camera" pkg="rosservice" type="rosservice" args="call --wait /camera/start_capture"/>
+</launch>
