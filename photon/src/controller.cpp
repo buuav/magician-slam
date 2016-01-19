@@ -1,9 +1,7 @@
-#include "Particle.h"
 #include "inc/controller.h"
-#include "inc/ros.h"
 
 geometry_msgs::Twist cmd_vel_msg;
-ros::Subscriber<geometry_msgs::Twist> sub_vel("crawler0/cmd_vel", cb_controller);
+ros::Subscriber<geometry_msgs::Twist> sub_vel("crawler0/cmd_vel", &cb_controller);
 
 void init_controller(){
 	nh.subscribe(sub_vel);

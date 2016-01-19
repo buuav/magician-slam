@@ -2,6 +2,7 @@
 #define INC_IMU_H_
 
 #include "Particle.h"
+#include "inc/ros.h"
 #include "lib/Adafruit_BNO055/Adafruit_BNO055.h"
 #include "lib/Adafruit_BNO055/utility/imumaths.h"
 #include "lib/ros/geometry_msgs/QuaternionStamped.h"

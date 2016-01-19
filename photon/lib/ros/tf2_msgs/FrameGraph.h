@@ -3,7 +3,7 @@
 #include <stdint.h>
 #include <string.h>
 #include <stdlib.h>
-#include "ros/msg.h"
+#include "../ros/msg.h"
 
 namespace tf2_msgs
 {

@@ -4,10 +4,10 @@
 #include <stdint.h>
 #include <string.h>
 #include <stdlib.h>
-#include "ros/msg.h"
-#include "std_msgs/Header.h"
-#include "geometry_msgs/Point32.h"
-#include "sensor_msgs/ChannelFloat32.h"
+#include "../ros/msg.h"
+#include "../std_msgs/Header.h"
+#include "../geometry_msgs/Point32.h"
+#include "../sensor_msgs/ChannelFloat32.h"
 
 namespace sensor_msgs
 {

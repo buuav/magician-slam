@@ -4,10 +4,10 @@
 #include <stdint.h>
 #include <string.h>
 #include <stdlib.h>
-#include "ros/msg.h"
-#include "std_msgs/Header.h"
+#include "../ros/msg.h"
+#include "../std_msgs/Header.h"
 #include "actionlib_msgs/GoalStatus.h"
-#include "tf2_msgs/LookupTransformResult.h"
+#include "../tf2_msgs/LookupTransformResult.h"
 
 namespace tf2_msgs
 {

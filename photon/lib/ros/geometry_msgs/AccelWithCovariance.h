@@ -4,8 +4,8 @@
 #include <stdint.h>
 #include <string.h>
 #include <stdlib.h>
-#include "ros/msg.h"
-#include "geometry_msgs/Accel.h"
+#include "../ros/msg.h"
+#include "../geometry_msgs/Accel.h"
 
 namespace geometry_msgs
 {

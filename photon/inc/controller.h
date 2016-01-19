@@ -2,6 +2,7 @@
 #define INC_CONTROLLER_H_
 
 #include "Particle.h"
+#include "inc/ros.h"
 #include "lib/ros/geometry_msgs/Twist.h"
 
 #define PIN_PWMA D2
@@ -12,6 +13,6 @@
 #define PIN_PWMB D3
 
 void init_controller();
-void cb_controller(const geometry_msgs::Twist);
+void cb_controller(const geometry_msgs::Twist&);
 
 #endif

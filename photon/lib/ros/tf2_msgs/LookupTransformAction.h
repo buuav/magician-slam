@@ -4,10 +4,10 @@
 #include <stdint.h>
 #include <string.h>
 #include <stdlib.h>
-#include "ros/msg.h"
-#include "tf2_msgs/LookupTransformActionGoal.h"
-#include "tf2_msgs/LookupTransformActionResult.h"
-#include "tf2_msgs/LookupTransformActionFeedback.h"
+#include "../ros/msg.h"
+#include "../tf2_msgs/LookupTransformActionGoal.h"
+#include "../tf2_msgs/LookupTransformActionResult.h"
+#include "../tf2_msgs/LookupTransformActionFeedback.h"
 
 namespace tf2_msgs
 {

@@ -4,8 +4,8 @@
 #include <stdint.h>
 #include <string.h>
 #include <stdlib.h>
-#include "ros/msg.h"
-#include "geometry_msgs/Pose.h"
+#include "../ros/msg.h"
+#include "../geometry_msgs/Pose.h"
 
 namespace geometry_msgs
 {

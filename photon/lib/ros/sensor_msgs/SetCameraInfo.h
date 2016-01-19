@@ -3,8 +3,8 @@
 #include <stdint.h>
 #include <string.h>
 #include <stdlib.h>
-#include "ros/msg.h"
-#include "sensor_msgs/CameraInfo.h"
+#include "../ros/msg.h"
+#include "../sensor_msgs/CameraInfo.h"
 
 namespace sensor_msgs
 {

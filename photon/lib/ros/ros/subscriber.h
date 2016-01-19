@@ -35,7 +35,7 @@
 #ifndef ROS_SUBSCRIBER_H_
 #define ROS_SUBSCRIBER_H_
 
-#include "rosserial_msgs/TopicInfo.h"
+#include "../rosserial_msgs/TopicInfo.h"
 
 namespace ros {
 

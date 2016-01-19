@@ -35,7 +35,7 @@
 #ifndef ROS_TF_H_
 #define ROS_TF_H_
 
-#include "geometry_msgs/TransformStamped.h"
+#include "../geometry_msgs/TransformStamped.h"
 
 namespace tf
 {

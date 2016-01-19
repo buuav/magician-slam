@@ -4,9 +4,9 @@
 #include <stdint.h>
 #include <string.h>
 #include <stdlib.h>
-#include "ros/msg.h"
-#include "ros/time.h"
-#include "ros/duration.h"
+#include "../ros/msg.h"
+#include "../ros/time.h"
+#include "../ros/duration.h"
 
 namespace tf2_msgs
 {

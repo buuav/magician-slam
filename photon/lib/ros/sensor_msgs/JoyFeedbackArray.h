@@ -4,8 +4,8 @@
 #include <stdint.h>
 #include <string.h>
 #include <stdlib.h>
-#include "ros/msg.h"
-#include "sensor_msgs/JoyFeedback.h"
+#include "../ros/msg.h"
+#include "../sensor_msgs/JoyFeedback.h"
 
 namespace sensor_msgs
 {

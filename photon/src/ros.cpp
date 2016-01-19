@@ -1,4 +1,3 @@
-#include "Particle.h"
 #include "inc/ros.h"
 
 ros::NodeHandle nh;

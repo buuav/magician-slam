@@ -1,6 +1,4 @@
-#include "Particle.h"
 #include "inc/imu.h"
-#include "inc/ros.h"
 
 Adafruit_BNO055 bno = Adafruit_BNO055();
 Timer timer_imu(IMU_SAMPLING_PERIOD, cb_imu);
@@ -10,9 +8,6 @@ uint32_t msg_seq = 0;
 const char msg_frame_id[] = "base_link";
 geometry_msgs::QuaternionStamped orientation_msg;
 geometry_msgs::Vector3Stamped angular_vel_msg, linear_accel_msg;
-orientation_msg.header.frame_id = msg_frame_id;
-angular_vel_msg.header.frame_id = msg_frame_id;
-linear_accel_msg.header.frame_id = msg_frame_id;
 ros::Publisher pub_orientation("crawler0/orientation", &orientation_msg);
 ros::Publisher pub_angular_vel("crawler0/angular_velocity", &angular_vel_msg);
 ros::Publisher pub_linear_accel("crawler0/linear_acceleration", &linear_accel_msg);
@@ -29,6 +24,10 @@ void init_imu(){
 	}
 	delay(1000);
 	bno.setExtCrystalUse(true);
+
+	orientation_msg.header.frame_id = msg_frame_id;
+	angular_vel_msg.header.frame_id = msg_frame_id;
+	linear_accel_msg.header.frame_id = msg_frame_id;
 
 	nh.advertise(pub_orientation);
 	nh.advertise(pub_angular_vel);

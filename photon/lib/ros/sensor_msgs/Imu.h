@@ -4,10 +4,10 @@
 #include <stdint.h>
 #include <string.h>
 #include <stdlib.h>
-#include "ros/msg.h"
-#include "std_msgs/Header.h"
-#include "geometry_msgs/Quaternion.h"
-#include "geometry_msgs/Vector3.h"
+#include "../ros/msg.h"
+#include "../std_msgs/Header.h"
+#include "../geometry_msgs/Quaternion.h"
+#include "../geometry_msgs/Vector3.h"
 
 namespace sensor_msgs
 {
